@@ -1,0 +1,87 @@
+this is a react bootstrap code so write in react file
+
+
+import React, { useState } from 'react'; // Import useState here
+
+
+import { Container, Card } from 'react-bootstrap';
+import Alert from 'react-bootstrap/Alert';
+
+// export const MYALERT = () => {
+//     const [show, setShow] = useState(true);
+//     if (show) {
+
+
+//         return (
+//             <>
+//                 <Container>
+//                     <Card>
+//                         <Alert variant='primary' dismissible onClose={()=>{setShow(false)}}>
+//                             <Alert.Heading>Heading</Alert.Heading>
+//                             <p>this is a body of alert</p>
+//                             <div>this is a div</div>
+//                         </Alert>
+
+//                     </Card>
+//                 </Container>
+//             </>
+//         )
+//     }else{
+//         return(
+//             <div>
+//                 <button onClick={()=>{setShow(true)}}>open</button>
+//             </div>
+//         )
+//     }
+// }
+
+
+
+
+// export const MYALERT = () => {
+//     const [show, setShow] = useState(true);
+
+
+
+//     return (
+//         <>
+//         <div>
+//             <Container>
+//                 <Card>
+//                     <Alert show={show} variant='primary' dismissible onClose={() => { setShow(false) }}>
+//                         <Alert.Heading>Heading</Alert.Heading>
+//                         <p>this is a body of alert</p>
+//                         <div>this is a div</div>
+//                     </Alert>
+
+//                 </Card>
+//             </Container>
+//             {!show && <button onClick={() => { setShow(true) }}>press me</button>}
+//             </div>
+//         </>
+//     )
+// }
+
+export const MYALERT = () => {
+    const [show, setShow] = useState(true);
+
+
+
+    return (
+        <>
+        <div>
+            <Container>
+                <Card>
+                    <Alert show={show} variant='primary' dismissible onClose={() => { setShow(false) }}>
+                        <Alert.Heading>Heading</Alert.Heading>
+                        <p>this is a body of alert</p>
+                        <div>this is a div</div>
+                    </Alert>
+
+                </Card>
+            </Container>
+            {!show && <button onClick={() => { setShow(true) }}>press me</button>}
+            </div>
+        </>
+    )
+}
